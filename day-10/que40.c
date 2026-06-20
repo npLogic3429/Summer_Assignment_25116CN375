@@ -1,23 +1,21 @@
 #include <stdio.h>
 
 int main() {
-    int n;
-
-    printf("Enter number of rows: ");
-    scanf("%d", &n);
+    int n = 5;
 
     for (int i = 1; i <= n; i++) {
+
         // Print spaces
         for (int j = 1; j <= n - i; j++) {
             printf(" ");
         }
 
-        // Print characters from A onwards
+        // Print increasing characters
         for (char ch = 'A'; ch < 'A' + i; ch++) {
             printf("%c", ch);
         }
 
-        // Print characters in reverse order
+        // Print decreasing characters
         for (char ch = 'A' + i - 2; ch >= 'A'; ch--) {
             printf("%c", ch);
         }
