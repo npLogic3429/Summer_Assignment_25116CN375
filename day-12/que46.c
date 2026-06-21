@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int armstrong(int num) {
+    int original = num, sum = 0, rem;
+
+    while (num > 0) {
+        rem = num % 10;
+        sum += rem * rem * rem;
+        num /= 10;
+    }
+
+    return (sum == original);
+}
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (armstrong(num))
+        printf("%d is an Armstrong Number\n", num);
+    else
+        printf("%d is not an Armstrong Number\n", num);
+
+    return 0;
+}
