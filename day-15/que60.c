@@ -17,8 +17,6 @@ int main() {
             arr[count++] = arr[i];
         }
     }
-
-    // Fill remaining positions with zeroes
     while (count < n) {
         arr[count++] = 0;
     }
